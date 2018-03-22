@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+	<div class="row">
+		{% for item in objects %}
+		<div class="col-md-4">
+			{% if item.image != "image not available" %}
+			<img src="{{ item.image }}" style="max-height: 50px; max-width: 50px;">
+			{% else %}
+			<p>Image not available</p>
+			{% endif %}
+			<p>{{ item.name }}</p>
+			<p>{{ item.category }}</p>
+			<a href="{{ item.link }}">{{ item.link }}</p></a>
+			<p>{{ item.availability }}</p>
+			<p>{{ item.amount }}</p>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+{% endblock %}

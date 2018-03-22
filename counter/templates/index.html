@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<form id="form" method="post" action="">
+	{% csrf_token %}
+	<input ref="search_input" type="text" name="search" id="input">
+	<button type="submit" id="submit">click here</button>
+</form>
+{% endblock %}
+
