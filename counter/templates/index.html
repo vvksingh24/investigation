@@ -1,9 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
-<form id="form" method="post" action="">
+<form id="form" method="post" action="" style="margin: 250px">
+	<div class="row">
+	<div class="col-md-8 offset-md-2">
 	{% csrf_token %}
-	<input ref="search_input" type="text" name="search" id="input">
-	<button type="submit" id="submit">click here</button>
+	<p class="text-center">Search for your product</p>
+	<input ref="search_input" type="text" name="search" id="input" placeholder="Enter your Product Name">
+	</div>
+	<div class="col-md-2">
+	<input type="number" name="pages" id="pages" style="margin-top: 2.5em;" placeholder="No of google pages">
+	</div>
+	<div class="col-md-4 offset-md-4 text-center" style="margin-top: 40px;">
+	<button  class="btn btn-default" type="submit" id="submit">submit</button>
+	</div>
+	</div>
 </form>
 {% endblock %}
 

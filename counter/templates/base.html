@@ -3,6 +3,42 @@
 <head>
 	<title>TI</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style type="text/css">
+	input[type=text]
+	{
+		width: 100%;
+	    border: solid 1px #337ee4;
+	    outline: none !important;
+	    border-radius: 0px;
+	    font-size: 16px;
+	    background-color: white;
+	    /* background-image: url(../../static/images/mic.png); */
+	    background-position: 10px 10px;
+	    background-size: 25px;
+	    opacity: 1;
+	    background-repeat: no-repeat;
+	    padding: 12px 20px 12px 50px;
+	    color: #525252;
+	    font-family: 'Open Sans', sans-serif;
+	}
+	input[type=number]
+	{
+		width: 100%;
+	    border: solid 1px #337ee4;
+	    outline: none !important;
+	    border-radius: 0px;
+	    font-size: 16px;
+	    background-color: white;
+	    /* background-image: url(../../static/images/mic.png); */
+	    background-position: 10px 10px;
+	    background-size: 25px;
+	    opacity: 1;
+	    background-repeat: no-repeat;
+	    padding: 12px 20px 12px 50px;
+	    color: #525252;
+	    font-family: 'Open Sans', sans-serif;
+	}
+	</style>
 </head>
 <body>
 	{%block content%}
@@ -12,7 +48,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script type="text/javascript">
 	$('#submit').click(function(){
-		$('#form').attr('action', "/results/"+$('#input').val());
+		$('#form').attr('action', "/results/"+$('#input').val()+"/"+$('#pages').val());
 		$('#form').submit();
 
 	});
